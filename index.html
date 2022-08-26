@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Todo app</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__heading">
+        <h1>TODO</h1>
+        <button>
+          <img src="images/icon-moon.svg" alt="dark mode button" />
+        </button>
+      </div>
+      <div class="header__add-list card">
+        <input
+          type="checkbox"
+          id="checkbox-add-todo"
+          class="check-box"
+          name="checkbox-add-todo"
+        />
+        <label for="checkbox-add-todo"></label>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          id="addTodoList"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="main__list card">
+        <ul id="list-todo"></ul>
+      </div>
+      <div class="list-footer card">
+        <span id="countElement">0 items left</span>
+        <button id="clear-button" onclick="clearCompleted()">
+          Clear Completed
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div class="card">
+        <button>All</button>
+        <button>Active</button>
+        <button>Completed</button>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
